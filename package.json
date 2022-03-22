@@ -1,0 +1,21 @@
+{
+  "name": "cypress-visit-with-custom-geolocation",
+  "version": "1.0.0",
+  "description": "Custom geo location",
+  "main": "index.js",
+  "Author": "Amol Gaikwad",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "custom geo location",
+    "geolocation",
+    "cypress"
+  ],
+  "author": {
+    "name": "Amol Gaikwad",
+    "email": "gaikwadamolraj@gmail.com"
+  },
+  "license": "ISC"
+}
