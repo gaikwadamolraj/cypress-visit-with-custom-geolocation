@@ -12,15 +12,27 @@ This will describes how to set up the custom geo location. Also you can use this
 npm i cypress-visit-with-custom-geolocation
 ```
 
-### Add custom command to your commands.js file
+## Add custom command to your commands.js file
 Go to /cypress/support/commands.js and add below code.
 ```sh
-import {registerCommand} from '@apple/cypressidms'
+import {registerCommand} from 'cypress-visit-with-custom-geolocation'
 registerCommand();
 ```
 
-### How to use in your script
+## How to use in your script
 Go to /cypress/support/commands.js and add below code.
 ```sh
 cy.visitWithCustomGeoLoc("https://goole.com", 51.507351, -0.127758);
 ```
+
+### Working example
+```sh
+https://github.com/gaikwadamolraj/custom-geo-location-cypress
+```
+
+### Author
+ Amol Gaikwad
+
+ [LinkedIn](https://www.linkedin.com/in/gaikwadamolraj/)
+
+ [Email](mailto:gaikwadamolraj@gmail.com)

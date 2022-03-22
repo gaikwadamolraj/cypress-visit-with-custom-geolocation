@@ -1,6 +1,6 @@
 {
   "name": "cypress-visit-with-custom-geolocation",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Custom geo location",
   "main": "index.js",
   "Author": "Amol Gaikwad",
