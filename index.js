@@ -1,4 +1,4 @@
-const setLocation = (win, latitude = 12.92, longitude = -10.50) => win.navigator.geolocation.getCurrentPosition = (success) => {
+const setLocation = (win, latitude = 51.507351, longitude = -0.127758) => win.navigator.geolocation.getCurrentPosition = (success) => {
   success({
     coords: {
       latitude,
@@ -8,7 +8,7 @@ const setLocation = (win, latitude = 12.92, longitude = -10.50) => win.navigator
 }
 
 const registerCommand = (name = "visitWithCustomGeoLoc") => {
-  const getByCommand = (url, latitude = 51.507351, longitude = -0.127758) => {
+  const getByCommand = (url, latitude, longitude) => {
     cy.visit(url, {
       onBeforeLoad: (win) => setLocation(win, latitude, longitude)
     })
