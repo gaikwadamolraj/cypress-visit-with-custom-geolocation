@@ -28,16 +28,29 @@ import {registerCommand} from 'cypress-visit-with-custom-geolocation'
 registerCommand();
 ```
 
-## How to use visitWithCustomGeoLoc() in your script
-```sh
-cy.visitWithCustomGeoLoc("https://goole.com", 51.507351, -0.127758);
-```
+## visitWithCustomGeoLoc()
 
-## How to use setGeoLocation() in your script
-```sh
-cy.setGeoLocation(51.507351, -0.127758);
-```
+   - ### Usage in your script
+     ```sh
+      cy.visitWithCustomGeoLoc("https://goole.com", 51.507351, -0.127758);
+      ```
 
+   - ### Defalt location to London
+     ```sh
+      cy.visitWithCustomGeoLoc("https://goole.com",
+     ```
+
+## setGeoLocation()
+
+   - ### Usage in your script
+     ```sh
+      cy.setGeoLocation(51.507351, -0.127758);
+      ```
+
+   - ### Defalt location to London
+     ```sh
+      cy.setGeoLocation();
+     ```
 ### Working example
 ```sh
 https://github.com/gaikwadamolraj/custom-geo-location-cypress
@@ -46,6 +59,6 @@ https://github.com/gaikwadamolraj/custom-geo-location-cypress
 ### Author
  Amol Gaikwad
 
- [LinkedIn](https://www.linkedin.com/in/gaikwadamolraj/)
-
- [Email](mailto:gaikwadamolraj@gmail.com)
+ [<img src="https://img.icons8.com/fluency/48/000000/linkedin.png"/>](https://www.linkedin.com/in/gaikwadamolraj/)
+ 
+ [<img src="https://img.icons8.com/external-xnimrodx-lineal-gradient-xnimrodx/64/000000/external-email-customer-service-xnimrodx-lineal-gradient-xnimrodx-2.png"/>](mailto:gaikwadamolraj@gmail.com)
