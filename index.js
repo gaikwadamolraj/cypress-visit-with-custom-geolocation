@@ -8,14 +8,16 @@ const setLocation = (win, latitude = 51.507351, longitude = -0.127758) => win.na
 }
 
 const registerCommand = (name = "visitWithCustomGeoLoc") => {
-  const getByCommand = (url, latitude, longitude) => {
+  const getByCommand = (win, url, latitude, longitude) => {
     cy.visit(url, {
-      onBeforeLoad: (win) => setLocation(win, latitude, longitude)
+      onBeforeLoad: () => setInterval(() => setLocation(win, latitude, longitude), 100)
     })
   }
   Cypress.Commands.add(name, getByCommand);
 }
-const setGeoLocation = (latitude, longitude) => cy.window().then((win) => setLocation(win, latitude, longitude))
+
+const setGeoLocation = (win, latitude, longitude) => setInterval(() => setLocation(win, latitude, longitude), 100);
+
 Cypress.Commands.add('setGeoLocation', setGeoLocation)
 
 module.exports = {

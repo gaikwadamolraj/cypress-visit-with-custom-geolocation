@@ -14,6 +14,13 @@ visitWithCustomGeoLoc(url, latitude, longitude)
 ```sh
 setGeoLocation(latitude, longitude)
 ```
+## pkg version >= 1.0.4 && cypress version >=9.5.3
+```sh
+visitWithCustomGeoLoc(win, url, latitude, longitude)
+```
+```sh
+setGeoLocation(win, latitude, longitude)
+```
 
 ## How to use in your cypress application
 ### Install package
@@ -34,23 +41,47 @@ registerCommand();
      ```sh
       cy.visitWithCustomGeoLoc("https://goole.com", 51.507351, -0.127758);
       ```
+     ### if pkg version >= 1.0.4 && cypress version >=9.5.3
+     ```sh
+      cy.window().then(win => {
+        cy.visitWithCustomGeoLoc(win, "https://goole.com", 51.507351, -0.127758);
+      })
+      ```
 
    - ### Defalt location to London
      ```sh
-      cy.visitWithCustomGeoLoc("https://goole.com",
+      cy.visitWithCustomGeoLoc("https://goole.com")
      ```
-
+     ### if pkg version >= 1.0.4 && cypress version >=9.5.3
+     ```sh
+      cy.window().then(win => {
+        cy.visitWithCustomGeoLoc(win, "https://goole.com");
+      })
+      ```
+ 
 ## setGeoLocation()
 
    - ### Usage in your script
      ```sh
       cy.setGeoLocation(51.507351, -0.127758);
       ```
+     ### if pkg version >= 1.0.4 && cypress version >=9.5.3
+     ```sh
+      cy.window().then(win => {
+        cy.setGeoLocation(win, 51.507351, -0.127758);
+      })
+      ```
 
    - ### Defalt location to London
      ```sh
       cy.setGeoLocation();
      ```
+     ### if pkg version >= 1.0.4 && cypress version >=9.5.3
+      ```sh
+        cy.window().then(win => {
+          cy.setGeoLocation(win);
+        })
+      ```
 ### Working example
 ```sh
 https://github.com/gaikwadamolraj/custom-geo-location-cypress
